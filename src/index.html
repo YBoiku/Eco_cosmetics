@@ -7,7 +7,7 @@
     <title>Mountain</title>
     <link rel="icon"
       type="image"
-      href="./images/icons/logo.png"
+      href="./images/icons/logo.svg"
     >
     <link rel="stylesheet" href="./styles/style.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,20 +25,25 @@
       <div class="container">
         <!-- #region non-desktop top-bar -->
         <div class="header__top-bar-non-desktop">
-          <div class="header__top-bar-non-desktop--icons">
-            <a href="#menu" class="icon icon--menu">
-              <img src="images/icons/Menu.png" alt="menu">
+          <div class="header__top-bar-non-desktop--icons icon--menu">
+            <a href="#menu" class="icon">
+              <img src="images/icons/burderMenu.svg" alt="menu">
             </a>
           </div>
-          <a href="#" class="header__top-bar-non-desktop--logo">
-            <img src="images/icons/logo.png" alt="mountain logo">
-          </a>
+          <div class="header__top-bar-non-desktop--icons">
+            <a
+              href="#"
+              class="icon icon--logo"
+            >
+              <img src="images/icons/logo.svg" alt="mountain logo">
+            </a>
+          </div>
           <div class="header__top-bar-non-desktop--icons">
             <a
               href="#"
               class="icon icon--shop"
             >
-              <img src="images/icons/shop.png" alt="shop">
+              <img src="images/icons/shop.svg" alt="shop">
             </a>
           </div>
         </div>
@@ -465,10 +470,9 @@
                     required
                   ></textarea>
                 </label>
-                <button type="submit" class="contact-us__button">Send a message</button>
+                <a type="submit" class="contact-us__button">Send a message</a>
               </form>
             </div>
-            <!-- <button type="submit" class="contact-us__button">Send a message</button> -->
           </div>
           <!-- #endregion -->
         </div>
@@ -519,7 +523,11 @@
             </li>
           </ul>
         </div>
-        <div class="footer__copyright">
+        <div class="footer__copyright--non-desktop">
+          &#169 2024 witch of mountain winds
+        </div>
+        <div class="footer__copyright--desktop">
+          Copyright&#169 2024 witch of mountain winds
         </div>
       </footer>
     </main>

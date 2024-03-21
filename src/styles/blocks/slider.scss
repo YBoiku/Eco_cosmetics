@@ -50,7 +50,7 @@
 
       &:hover {
         opacity: 1;
-        transform:scale(1.1);
+        transform: scale(1.1);
       }
 
       &__button {
@@ -61,6 +61,10 @@
 
         position: relative;
         text-decoration: none;
+
+        @include onTablet {
+          min-width: 55px;
+        }
 
         @include onDesktop {
           font-size: 18px;

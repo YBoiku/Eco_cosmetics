@@ -1,6 +1,6 @@
 .footer {
   &__background {
-    background-color: #8C9772;
+    background-color: #8c9772;
   }
 
   display: grid;
@@ -28,6 +28,16 @@
     font-weight: 500;
     list-style: none;
 
+    & > li {
+      transition: all 0.4s ease;
+
+      &:hover {
+        right: 20px;
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+
     @include onTablet {
       padding-top: 29px;
       gap: 15px;
@@ -43,7 +53,7 @@
       position: relative;
       color: inherit;
       text-decoration: none;
-      color: #E4DFD3;
+      color: #e4dfd3;
       font-size: 18px;
       line-height: 27px;
 
@@ -60,22 +70,32 @@
     gap: 20px;
     margin-top: 20px;
 
+    & > a {
+      transition: all 0.4s ease;
+
+      &:hover {
+        right: 20px;
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+
     @include onTablet {
       grid-column: 1 / 2;
-    };
+    }
 
     @include onDesktop {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
       margin: 30px 0 0 100px;
-      height: min-content
-    };
+      height: min-content;
+    }
   }
 
   &__contact {
     margin: 0 0 30px;
     margin-bottom: 10px;
-    color: #E4DFD3;
+    color: #e4dfd3;
 
     @include onTablet {
       grid-row: 1 / 2;
@@ -103,6 +123,17 @@
       line-height: 21px;
       list-style: none;
 
+      & > li:nth-child(2),
+      :nth-child(3):hover {
+        transition: all 0.4s ease;
+
+        &:hover {
+          right: 20px;
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+
       @include onTablet {
         padding: 29px 0 0;
         gap: 7px;
@@ -117,7 +148,7 @@
         position: relative;
         color: inherit;
         text-decoration: none;
-        color: #E4DFD3;
+        color: #e4dfd3;
         font-weight: 400;
         font-size: 14px;
         line-height: 21px;
@@ -130,27 +161,43 @@
     }
   }
 
-  &__copyright {
+  &__copyright--non-desktop {
     margin: 40px auto 40px;
     width: 200px;
     height: 36px;
-    background-image: url("/images/img_Mobile/Group 12.1.svg");
-    background-position: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: $backgroung-color;
 
     @include onTablet {
-      width: 200px;
+      width: 320px;
       height: 36px;
-      background-image: url("/images/img_Mobile/Group 12.1.svg");
-      background-position: center;
+      font-weight: 400;
+      text-align: left;
       margin: 50px 0 30px;
       grid-column: 1/2;
     }
 
     @include onDesktop {
-      background-image: url(../images/img_Desktop/copyright-desktop.svg);
-      width: 382px;
-      height: 27px;
-      margin: 27px 0 0;
+      display: none;
     }
+  }
+
+  &__copyright--desktop {
+      display: none;
+      // grid-column: 1/2;
+      // grid-row: 2 / 3;
+
+      @include onDesktop {
+        display: inherit;
+
+        color: $backgroung-color;
+        font-weight: 500;
+        font-size: 18px;
+        width: 382px;
+        height: 27px;
+        margin: 27px 0 0;
+      }
   }
 }
